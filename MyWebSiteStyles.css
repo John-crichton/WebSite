@@ -24,3 +24,36 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.logo{
+    width:10%;
+    height:10%;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+/* usuwanie podkreślenia pod elementami menu na początku strony - linia 16-20 html*/
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position:relative;
+}
+/* dodajemy podkreślenie  */
+nav ul li a::after{
+    content: '';
+    width: 0;  /* jeśli ustawimy na zero element będzie niewidoczny*/
+    height: 2px;
+    background: gold;
+    position:absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.5s;
+    
+}
+nav ul li a:hover::after{
+    
+    width: 100%;  /* jeśli ustawimy na zero element będzie niewidoczny*/
+    
+}
