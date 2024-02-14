@@ -87,7 +87,7 @@ nav ul li a:hover::after{
     font-weight: 600;
     color: white;
 }
-.Omnie-zakładki{
+.Omnie-linki{
     display: flex;
     margin: 20px 0 40px;
 }
@@ -97,4 +97,31 @@ nav ul li a:hover::after{
     font-weight: 500;
     cursor:pointer;
     position: relative;
+}
+.linki::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: gold;
+    position: absolute;
+    left: 0; 
+    bottom: -8px;
+    transition: 0.5s;
+}
+.linki.aktywnyLink:hover::after{
+    width:50%;
+}
+.Omnie-zawartosc ul li{
+    list-style:none;
+    margin: 10px;
+}
+.Omnie-zawartosc ul li span{
+    color:gold;
+    font-size: 14px;
+}
+.Omnie-zawartosc{
+    display: none;
+}
+.aktywnaZawartosc{
+    display: block;
 }

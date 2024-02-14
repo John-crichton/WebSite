@@ -38,15 +38,50 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, illo ut dolorem ullam unde rem! Repellendus possimus aliquid, modi aperiam dolorem nobis, odit blanditiis esse voluptatibus quaerat porro sequi dolorum.</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, illo ut dolorem ullam unde rem! Repellendus possimus aliquid, modi aperiam dolorem nobis, odit blanditiis esse voluptatibus quaerat porro sequi dolorum.</p>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, illo ut dolorem ullam unde rem! Repellendus possimus aliquid, modi aperiam dolorem nobis, odit blanditiis esse voluptatibus quaerat porro sequi dolorum.</p>
-                    <div class="Omnie-zakładki">
-                        <p class="linki">Umiejętności</p>
-                        <p class="linki">Doświadczenie</p>
-                        <p class="linki">Wykształcenie</p>
+
+                    <div class="Omnie-linki">
+                        <p class="linki aktywnyLink" onclick="opentab('Umiejętności')">Umiejętności</p>
+                        <p class="linki" onclick="opentab('Doświadczenie')">Doświadczenie</p>
+                        <p class="linki" onclick="opentab('Wykształcenie')">Wykształcenie</p>
+                    </div>
+                    <div class="Omnie-zawartosc aktywnaZawartosc" id="Umiejętności">
+                        <ul>
+                            <li><span>Frontend</span><br>projektowanie aplikacji webowych</li>
+                            <li><span>Automotive</span><br>programowanie sterowników PLC</li>
+                            <li><span>Team management</span><br>zarządzanie zespołem</li>
+                        </ul>
+                    </div>
+                    <div class="Omnie-zawartosc" id="Doświadczenie">
+                        <ul>
+                            <li><span>2014 - Current</span><br>programowanie sterowników PLC</li>
+                            <li><span>2018 - 2023</span><br>zarządzanie zespołem</li>
+                        </ul>
+                    </div>
+                    <div class="Omnie-zawartosc" id="Wykształcenie">
+                        <ul>
+                            <li><span>Frontend</span><br>Collegium DaVinci</li>
+                            <li><span>Elektrotechnika</span><br>Politechnika Poznańska</li>
+                        </ul>
                     </div>
                 </div>
             
             </div>
         </div>
     </div>
+    <script>
+        var OmnieLinki = document.getElementsByClassName("Omnie-linki");
+        var OmnieZawartosc = document.getElementsByClassName("Omnie-zawartosc");
+        
+        function opentab(tabname){
+            for(element of OmnieLinki){
+                element.classList.remove("aktywnyLink");
+            }
+            for(Zawartosc of OmnieZawartosc){
+                Zawartosc.classList.remove("aktywnaZawartosc");
+            }
+            event.currentTarget.classList.add('aktywnyLink');
+            document.getElementById(tabname).classList.add("aktywnaZawartosc");
+        }
+        </script>
 </body>
 </html>
