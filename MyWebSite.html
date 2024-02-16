@@ -40,24 +40,24 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, illo ut dolorem ullam unde rem! Repellendus possimus aliquid, modi aperiam dolorem nobis, odit blanditiis esse voluptatibus quaerat porro sequi dolorum.</p>
 
                     <div class="Omnie-linki">
-                        <p class="linki aktywnyLink" onclick="opentab('Umiejętności')">Umiejętności</p>
-                        <p class="linki" onclick="opentab('Doświadczenie')">Doświadczenie</p>
-                        <p class="linki" onclick="opentab('Wykształcenie')">Wykształcenie</p>
+                        <p class="linki" onclick="opentab('Umiejetnosci')">Umiejętności</p>
+                        <p class="linki" onclick="opentab('Doswiadczenie')">Doświadczenie</p>
+                        <p class="linki" onclick="opentab('Wyksztalcenie')">Wykształcenie</p>
                     </div>
-                    <div class="Omnie-zawartosc aktywnaZawartosc" id="Umiejętności">
+                    <div class="Omnie-zawartosc aktywnaZawartosc" id="Umiejetnosci">
                         <ul>
                             <li><span>Frontend</span><br>projektowanie aplikacji webowych</li>
                             <li><span>Automotive</span><br>programowanie sterowników PLC</li>
                             <li><span>Team management</span><br>zarządzanie zespołem</li>
                         </ul>
                     </div>
-                    <div class="Omnie-zawartosc" id="Doświadczenie">
+                    <div class="Omnie-zawartosc" id="Doswiadczenie">
                         <ul>
                             <li><span>2014 - Current</span><br>programowanie sterowników PLC</li>
                             <li><span>2018 - 2023</span><br>zarządzanie zespołem</li>
                         </ul>
                     </div>
-                    <div class="Omnie-zawartosc" id="Wykształcenie">
+                    <div class="Omnie-zawartosc" id="Wyksztalcenie">
                         <ul>
                             <li><span>Frontend</span><br>Collegium DaVinci</li>
                             <li><span>Elektrotechnika</span><br>Politechnika Poznańska</li>
@@ -69,7 +69,7 @@
         </div>
     </div>
     <script>
-        var OmnieLinki = document.getElementsByClassName("Omnie-linki");
+        var OmnieLinki = document.getElementsByClassName("linki");
         var OmnieZawartosc = document.getElementsByClassName("Omnie-zawartosc");
         
         function opentab(tabname){
