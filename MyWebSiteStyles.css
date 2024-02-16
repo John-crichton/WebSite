@@ -49,7 +49,7 @@ nav ul li a::after{
     position:absolute;
     left:0;
     bottom: -6px;
-    transition: 0.5s;
+    transition: 0.2s;
     
 }
 nav ul li a:hover::after{
@@ -61,4 +61,67 @@ nav ul li a:hover::after{
 }
 .header-text h1 span{
     color: red;
+}
+/* -------------------------------- o Mnie ---------------------------------*/
+#Omnie{
+    padding:80px 0;
+    color: #ababaa;
+}
+.wiersz{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Omnie-kol-1{
+    flex-basis:  30%;
+}
+.Omnie-kol-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.Omnie-kol-2{
+    flex-basis: 60%;
+}
+.opis{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+.Omnie-linki{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.linki{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor:pointer;
+    position: relative;
+}
+.linki::after{
+    content:'';
+    width: 0;
+    height: 3px;
+    background: gold;
+    position: absolute;
+    left: 0; 
+    bottom: -8px;
+    transition: 0.5s;
+}
+.linki.aktywnyLink::after{
+    width:50%;
+}
+.Omnie-zawartosc ul li{
+    list-style:none;
+    margin: 10px;
+}
+.Omnie-zawartosc ul li span{
+    color:gold;
+    font-size: 14px;
+}
+.Omnie-zawartosc{
+    display: none;
+}
+.Omnie-zawartosc.aktywnaZawartosc{
+    display: block;
 }
