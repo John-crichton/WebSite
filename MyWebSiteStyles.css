@@ -6,14 +6,14 @@
 }
 body{
     background-color: black;
-    color:white;
+    color:#fff;
 }
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(/pics/Monachium2022_1.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: url(/pics/Autobus.jpg);
+    background-size:cover;
+    background-position:center;
 }
 .container{
     padding: 10px 10%;
@@ -28,6 +28,7 @@ nav{
     width:10%;
     height:10%;
 }
+
 nav ul li{
     display: inline-block;
     list-style: none;
@@ -35,16 +36,16 @@ nav ul li{
 }
 /* usuwanie podkreślenia pod elementami menu na początku strony - linia 16-20 html*/
 nav ul li a{
-    color: #fff;
+    color: whitesmoke;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px;
     position:relative;
 }
 /* dodajemy podkreślenie  */
 nav ul li a::after{
     content: '';
     width: 0;  /* jeśli ustawimy na zero element będzie niewidoczny*/
-    height: 2px;
+    height: 3px;
     background: gold;
     position:absolute;
     left:0;
@@ -56,13 +57,14 @@ nav ul li a:hover::after{
     width: 100%;  /* jeśli ustawimy na zero element będzie niewidoczny*/
 }
 .header-text{
+    text-align: right;
     margin-top: 20%;
-    font-size: 30px;
+    font-size: 20px;
 }
 .header-text h1 span{
-    color: red;
+    color: gold;
 }
-/* -------------------------------- o Mnie ---------------------------------*/
+/* -------------------------------- o Mnie -----------------------------*/
 #Omnie{
     padding:80px 0;
     color: #ababaa;
@@ -124,4 +126,45 @@ nav ul li a:hover::after{
 }
 .Omnie-zawartosc.aktywnaZawartosc{
     display: block;
+}
+
+/* ------------------------oferta------------------------------- */
+
+#oferta{
+    padding: 20px 0;
+}
+.oferta-lista{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+   grid-gap: 40px;
+   margin-top: 50px;
+}
+.oferta-lista div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.oferta-lista div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.oferta-lista div h2{
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.oferta-lista div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display:inline-block ;
+    margin-bottom: 15px;
+}
+.oferta-lista div:hover{
+    background:#ff004f;
+    transform: translateY(-8px)
 }
