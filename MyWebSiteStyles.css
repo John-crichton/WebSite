@@ -38,7 +38,7 @@ nav ul li{
 nav ul li a{
     color: whitesmoke;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 20px;
     position:relative;
 }
 /* dodajemy podkreślenie  */
@@ -50,7 +50,7 @@ nav ul li a::after{
     position:absolute;
     left:0;
     bottom: -6px;
-    transition: 0.2s;
+    transition: 0.5s;
     
 }
 nav ul li a:hover::after{
@@ -93,6 +93,11 @@ nav ul li a:hover::after{
     display: flex;
     margin: 20px 0 40px;
 }
+.Omnie-linki p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .linki{
     margin-right: 50px;
     font-size: 18px;
