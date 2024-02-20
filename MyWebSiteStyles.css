@@ -1,7 +1,9 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
     box-sizing: border-box;
 }
 body{
@@ -38,7 +40,7 @@ nav ul li{
 nav ul li a{
     color: whitesmoke;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 20px;
     position:relative;
 }
 /* dodajemy podkreślenie  */
@@ -50,7 +52,7 @@ nav ul li a::after{
     position:absolute;
     left:0;
     bottom: -6px;
-    transition: 0.2s;
+    transition: 0.5s;
     
 }
 nav ul li a:hover::after{
@@ -93,6 +95,11 @@ nav ul li a:hover::after{
     display: flex;
     margin: 20px 0 40px;
 }
+.Omnie-linki p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .linki{
     margin-right: 50px;
     font-size: 18px;
@@ -168,3 +175,24 @@ nav ul li a:hover::after{
     background:#ff004f;
     transform: translateY(-8px)
 }
+
+/* ------------------------------portfolio------------------- */
+/* #projekty{
+    padding: 20px 0;
+}
+.lista_projektów{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.projekt{
+    border-radius: 10px;
+    position:relative;
+    overflow:hidden;    
+}
+.projekt img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+} */
