@@ -48,7 +48,7 @@ nav ul li a::after{
     content: '';
     width: 0;  /* jeśli ustawimy na zero element będzie niewidoczny*/
     height: 3px;
-    background: gold;
+    background: darkgoldenrod;
     position:absolute;
     left:0;
     bottom: -6px;
@@ -110,7 +110,7 @@ nav ul li a:hover::after{
     content:'';
     width: 0;
     height: 3px;
-    background: gold;
+    background: darkgoldenrod;
     position: absolute;
     left: 0; 
     bottom: -8px;
@@ -171,7 +171,7 @@ nav ul li a:hover::after{
     margin-bottom: 15px;
 }
 .oferta-lista div:hover{
-    background:#ff004f;
+    background: darkgoldenrod;
     transform: translateY(-8px)
 }
 
@@ -181,9 +181,9 @@ nav ul li a:hover::after{
 }
 .lista_projektów{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
     grid-gap: 40px;
-    grid-template-rows:0.8fr;
+    /* grid-template-rows:repeat(3,0.7fr); */
     margin-top: 50px;
 }
 .projekt{
@@ -193,6 +193,61 @@ nav ul li a:hover::after{
 }
 .projekt img{
     width: 100%;
+    height:300px;
     border-radius: 10px;
     display: block;
+    transition: transform 0.5s;
+}
+.warstwa{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), darkgoldenrod);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.4s ;
+}
+.warstwa h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.warstwa a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.projekt:hover img{
+    transform: scale(1.2);
+}
+.projekt:hover .warstwa{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width:fit-content;
+    border: 1px solid darkgoldenrod;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+.btn:hover{
+    background: darkgoldenrod;
 }
