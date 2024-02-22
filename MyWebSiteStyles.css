@@ -176,13 +176,11 @@ nav ul li a:hover::after{
 }
 
 /* ------------------------------portfolio------------------- */
-
 #projekty{
     padding: 20px 0;
 }
 .lista_projektów{
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); 
     grid-gap: 40px;
     /* grid-template-rows:repeat(3,0.7fr); */
@@ -195,7 +193,6 @@ nav ul li a:hover::after{
 }
 .projekt img{
     width: 100%;
-
     height:300px;
     border-radius: 10px;
     display: block;
@@ -250,10 +247,58 @@ nav ul li a:hover::after{
     text-decoration: none;
     color: #fff;
     transition: 0.5s;
+    background-color: black;
 }
 .btn:hover{
     background: darkgoldenrod;
 }
-    border-radius: 10px;
-    display: block;
-} */
+
+/* ----------------------------------------kontakt----------------------------------- */
+.lewaKolumna{
+    flex-basis:35%;
+}
+.prawaKolumna{
+    flex-basis:60%;
+}
+.lewaKolumna p{
+    margin-top: 30px;
+}
+.lewaKolumna p i{
+    color: darkgoldenrod;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.media-ikony{
+    margin-top: 30px;
+}
+.media-ikony a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: darkgoldenrod;
+    display: inline-block;
+    transition: 0.5s; 
+}
+.media-ikony a:hover{
+    color: gold;
+    transform: translateY(-5px) scale(1.2);
+}
+.btn.btn2{
+    display: inline-block;
+}
+.prawaKolumna form{
+    width:100%; 
+}
+form input, form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+
