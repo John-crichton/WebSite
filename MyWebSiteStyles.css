@@ -322,3 +322,29 @@ form .btn2{
 .autor i{
     color: #ff004f;
 }
+
+
+/* ----------------------------responsywność-------------------------- */
+@media only screen and (max-width: 600px){
+    /* zmiana obrazu przy małej rozdzielczości, zmniejszenie czcionki nagłówków */
+    #header{
+        background-image: url(./pics/600px.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    /* ------------menu boczne------------- */
+    /* zmiana struktury menu - przy małej rozdzielczości będzie rozwijane menu. Dochodzą dwie dodatkowe ikony.
+      */
+    .container nav i ul {
+        flex-direction: column;
+    }
+}
+
+/* .container nav i{
+    display: none;
+} */
