@@ -17,15 +17,15 @@
         <div class="container">
             <nav>
                 <img src="./pics/Nowe_logo.png"  alt="logo" class="logo">
-                <ul>
+                <ul id="menuBoczne">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
-                    <i class="fa-solid fa-xmark"></i>
+                    <i class="fa-solid fa-xmark" onclick="zamknijMenu()"></i>
                 </ul>
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" onclick="otworzMenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Programista frontend</p>
@@ -186,6 +186,16 @@
             event.currentTarget.classList.add('aktywnyLink');
             document.getElementById(tabname).classList.add("aktywnaZawartosc");
         }
+        </script>
+        <script>
+            var menuBoczne = document.getElementById("menuBoczne")
+
+            function otworzMenu(){
+                menuBoczne.style.right ="0";
+            }
+            function zamknijMenu(){
+                menuBoczne.style.right ="-200px";
+            }
         </script>
 </body>
 </html>

@@ -325,26 +325,55 @@ form .btn2{
 
 
 /* ----------------------------responsywność-------------------------- */
+nav .fa-solid{
+    display: none;  
+    /* bars i cross będa niewidoczne przy rozdzielczościach powyżej 600px */
+}
 @media only screen and (max-width: 600px){
     /* zmiana obrazu przy małej rozdzielczości, zmniejszenie czcionki nagłówków */
     #header{
-        background-image: url(./pics/600px.png);
+        background-image: url(./pics/zLotuPtaka_res.png);    
     }
     .header-text{
+        /* text-align:end; */
         margin-top: 100%;
         font-size: 16px;
+        /* zmiana położenia tekstu  */
     }
     .header-text h1{
         font-size: 30px;
     }
-    /* ------------menu boczne------------- */
-    /* zmiana struktury menu - przy małej rozdzielczości będzie rozwijane menu. Dochodzą dwie dodatkowe ikony.
-      */
-    .container nav i ul {
-        flex-direction: column;
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
     }
-}
-
-/* .container nav i{
-    display: none;
-} */
+    /* ------------menu boczne------------- */
+    /* /* zmiana struktury menu - przy małej rozdzielczości będzie rozwijane menu. Dochodzą dwie dodatkowe ikony. */
+    nav ul{
+        background: black;
+        position:fixed;
+        top: 0;
+        right: -200px;
+        width:200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin:25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+    }
+    .wiersz{
+        font-size: 40px;
+    }
+    .Omnie-kol-1 .Omnie-kol-2{
+        flex-basis: 100%;
+    }
+ }
