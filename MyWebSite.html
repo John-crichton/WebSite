@@ -17,13 +17,15 @@
         <div class="container">
             <nav>
                 <img src="./pics/Nowe_logo.png"  alt="logo" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="menuBoczne">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#Omnie">About</a></li>
+                    <li><a href="#oferta">Services</a></li>
+                    <li><a href="#projekty">Portfolio</a></li>
+                    <li><a href="#kontakt">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="zamknijMenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="otworzMenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Programista frontend</p>
@@ -158,7 +160,7 @@
             <div class="prawaKolumna">
                 <form >
                     <input type="text" name="Imię" placeholder="Imię" required>
-                    <input type="email" name="email" placeholder="Twój email" required>
+                    <input type="email" name="Email" placeholder="Twój email" required>
                     <textarea name="Wiadomość"  rows="6" placeholder="Twoja wiadomość"></textarea>
                     <button type="submit" class="btn btn2">Wyślij</button>
                 </form>
@@ -184,6 +186,16 @@
             event.currentTarget.classList.add('aktywnyLink');
             document.getElementById(tabname).classList.add("aktywnaZawartosc");
         }
+        </script>
+        <script>
+            var menuBoczne = document.getElementById("menuBoczne")
+
+            function otworzMenu(){
+                menuBoczne.style.right ="0";
+            }
+            function zamknijMenu(){
+                menuBoczne.style.right ="-200px";
+            }
         </script>
 </body>
 </html>
