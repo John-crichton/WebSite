@@ -158,7 +158,7 @@
                 <a href="./pics/BUS.png" download class="btn btn2">sciągnij CV</a>
             </div>
             <div class="prawaKolumna">
-                <form >
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Imię" placeholder="Imię" required>
                     <input type="email" name="Email" placeholder="Twój email" required>
                     <textarea name="Wiadomość"  rows="6" placeholder="Twoja wiadomość"></textarea>
@@ -197,5 +197,16 @@
                 menuBoczne.style.right ="-200px";
             }
         </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwaJkXXzG5uBGWQ8xCOcVhYckvYY7vSGtjKRoUhwhAELQp-eCu6CePNW9-Vdx7AuKmr/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
 </body>
 </html>
