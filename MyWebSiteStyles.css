@@ -383,3 +383,9 @@ nav .fa-solid{
  }
 
  /* ----------------------------skrolowanie---------------------------------- */
+#info{
+    color: #ff004f;
+    margin-top: 10px;
+    margin-left: 15px;
+    display: block;
+}
