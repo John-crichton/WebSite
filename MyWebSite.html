@@ -33,6 +33,7 @@
             </div>
         </div>
     </div>
+    <!-- <a href="#"class="scrollback"></a> -->
     <!-------------------------------O Mnie ----------------------------------->
     <div id="Omnie">
         <div class="container">
@@ -158,7 +159,7 @@
                 <a href="./pics/BUS.png" download class="btn btn2">sciągnij CV</a>
             </div>
             <div class="prawaKolumna">
-                <form name="submit-to-google-sheet">
+                <form name="submit-to-google-sheet" id="fm1">
                     <input type="text" name="Imię" placeholder="Imię" required>
                     <input type="email" name="Email" placeholder="Twój email" required>
                     <textarea name="Wiadomość"  rows="6" placeholder="Twoja wiadomość"></textarea>
@@ -202,14 +203,18 @@
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwaJkXXzG5uBGWQ8xCOcVhYckvYY7vSGtjKRoUhwhAELQp-eCu6CePNW9-Vdx7AuKmr/exec'
             const form = document.forms['submit-to-google-sheet']
             const info = document.getElementById("info")
-            form.addEventListener('submit', e => {
+            fm1.addEventListener('submit', e => {
               e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              fetch(scriptURL, { method: 'POST', body: new FormData(fm1)})
                 .then(response => {
-                    info.innerHTML = "wiadomosc wyslana"
+                    info.innerHTML = "Wiadomość wysłana"
+                    setTimeout(function(){
+                        info.innerHTML=""
+                    },5000)
+                    form.reset()
                 })
                 .catch(error => console.error('Error!', error.message))
             })
-          </script>
+        </script>
 </body>
 </html>

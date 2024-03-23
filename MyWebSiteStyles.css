@@ -266,7 +266,8 @@ nav ul li a:hover{
     flex-basis: 35%;
 }
 .prawaKolumna{
-    flex-basis: 60%;
+    /* ustawienie formularza i przycisku wyślij w jednej lini z przyciskiem więcej  */
+    flex-basis: 56%;
 }
 .lewaKolumna p{
     margin-top: 30px;
@@ -295,10 +296,10 @@ nav ul li a:hover{
     display: inline-block;
 }
 .prawaKolumna form{
-    width:100%; 
+    width:80%; 
 }
 form input, form textarea{
-    width:100%;
+    width:80%;
     border:0;
     outline:none;
     background: #262626;
@@ -389,3 +390,4 @@ nav .fa-solid{
     margin-left: 15px;
     display: block;
 }
+
